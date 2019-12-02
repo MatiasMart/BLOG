@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -40,10 +40,25 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="imagen" class="col-md-4 col-form-label text-md-right">{{ __('Imagen Perfil') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="imagen" type="file" class="form-control @error('imagen') is-invalid @enderror" name="imagen"  required autofocus>
+
+                                @error('imagen')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="fecha" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
 
                             <div class="col-md-6">
                                 <input id="fecha" type="date" class="form-control " name="fecha" value="{{ old('fecha') }}" required autocomplete="fecha" autofocus max="2001-01-02">
+                                <span>*Debes ser mayor de 18 años para poder registrarte</span>
                             </div>
                         </div>
 
