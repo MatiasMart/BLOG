@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\AdminController;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -26,5 +28,7 @@ Route::post('/admin/post', 'AdminController@agregarPost');
 
 route::get('/admin/modificar/{id}', 'AdminController@mostrar');
 route::post('/admin/modificar/{id}', 'AdminController@modificar');
+
+route::get('/admin/eliminar/{id}', 'AdminController@eliminar');
 
 Route::get('/admin/usuarios', 'AdminController@indexusuarios');

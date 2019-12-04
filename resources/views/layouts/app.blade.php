@@ -13,10 +13,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
 
     <title>@yield('titulo')</title>
 </head>
@@ -25,7 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <p>Mi blog</p>
+                    <img id="imglogo" src="/storage/8af6368b-460d-4a97-85a6-13a511de9dc8_200x200.png" alt="" >
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -39,16 +40,16 @@
 
                     <ul class="navbar-nav block">
                         <li class="nav-item">
-                            <a class="nav-link color_menu" href="../recursos/index.php">Inicio</a>
+                            <a class="nav-link color_menu" href="../recursos/index.php">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../producto/listado.php">Blog</a>
+                            <a class="nav-link" href="../producto/listado.php">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../recursos/faq.php">Sobre mi</a>
+                            <a class="nav-link" href="../recursos/faq.php">SOBRE MIi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../usuario/contacto.php">Contacto</a>
+                            <a class="nav-link" href="../usuario/contacto.php">CONTACTO</a>
                         </li>
                     </ul>     
 

@@ -6,5 +6,11 @@ Mi Blog
 
 
 @section('content')
-<h1>Bienvenido</h1>
+        <div class="contenido-home">
+            <div  class="banner">
+                <img id="banner" src="/storage/banner.jpg" alt="banner de la pagina principal">
+
+                <h2 id="bienvenido">BIENVENIDOS A MI BLOG DE VIAJERO</h2>
+            </div>
+        </div>
 @endsection

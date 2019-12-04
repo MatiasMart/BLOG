@@ -88,4 +88,13 @@ class AdminController extends Controller
 
         return redirect('/admin');
     }
+
+
+    public function eliminar($id){
+        $post = Post::find($id);
+        $post->delete();
+    
+        return redirect("/admin");
+
+    }
 }

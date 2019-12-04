@@ -18,7 +18,7 @@
 
         </div>
     @endif
-        <form  class="container" action="/admin/post"  method="POST" enctype="multipart/form-data">
+        <form  class="container-a" action="/admin/post"  method="POST" enctype="multipart/form-data">
             @csrf
 
             <label for="titulo">Titulo</label>
@@ -45,7 +45,7 @@
             <label for="contenido">Conentido del Post</label>
             <textarea id="contenido" name="contenido"  style="height:200px" value="{{old('contenido')}}"></textarea>
             
-            <button type="submit" name="submit">Enviar</button>
+            <button id="publicar" type="submit" name="submit">Publicar</button>
             <input type="reset" value="Borrar">
 
         </form>

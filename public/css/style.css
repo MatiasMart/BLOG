@@ -1,5 +1,11 @@
 
 
+*{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;;
+}
+
+
 html, body {
     background-color: #fff;
     color: #636b6f;
@@ -51,6 +57,18 @@ html, body {
     margin-bottom: 30px;
 }
 
+#imglogo{
+    width: 60%;
+}
+
+.nav-link{
+    margin-left: 20px ;
+}
+
+main{
+    padding-top: 0px;
+}
+
 
 /* ADMIN */
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
@@ -93,11 +111,7 @@ html, body {
 
 /* agregar admin */
 
-*{
-    box-sizing: border-box;
-}
-
-.container{
+.container-a{
     overflow: hidden;
     margin: 5% 0;
 }
@@ -128,7 +142,7 @@ input[type=file], select, textarea{
 
   
   button{
-    background-color: #4CAF50;
+    background-color: rgb(89, 53, 206);
     color: white;
     padding: 12px 20px;
     border: none;
@@ -147,11 +161,11 @@ input[type=file], select, textarea{
   }
 
   
- button:hover {
-    background-color: #347a38;
+ #publicar:hover {
+    background-color: rgb(58, 16, 195);
   }
   
-  .container {
+  .container-a {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -189,7 +203,7 @@ input[type=file], select, textarea{
 
 @media only screen and (min-width: 589px) {
     
- .container{
+ .container-a{
      margin-left: 3%;
      width: 94%;
  }
@@ -203,7 +217,7 @@ input[type=file], select, textarea{
         display: flex;
     }
 
-    .container{
+    .container-a{
         width: 80%;
 
     }
@@ -228,6 +242,28 @@ input[type=file], select, textarea{
 
   /*  admin */
  /* /agregar admin */
+
+
+ /* HOME PRINCIPAL */
+
+ .contenido-home
+ {
+     width: 72%;
+     margin: 0 auto;
+     position: relative;
+ }
+
+ #banner{
+     width: 100%;
+ }
+
+ #bienvenido{
+     position: absolute;
+     top: 325px;
+     left: 350px;
+     background-color: rgba(254, 246, 80, 0.5)
+ }
+ /* /HOME PRINCIPAL */
 
 
 
