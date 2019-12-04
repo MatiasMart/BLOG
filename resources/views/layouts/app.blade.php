@@ -16,7 +16,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>@yield('titulo')</title>
 </head>
@@ -37,9 +37,25 @@
 
                     </ul>
 
+                    <ul class="navbar-nav block">
+                        <li class="nav-item">
+                            <a class="nav-link color_menu" href="../recursos/index.php">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../producto/listado.php">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../recursos/faq.php">Sobre mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../usuario/contacto.php">Contacto</a>
+                        </li>
+                    </ul>     
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

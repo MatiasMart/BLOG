@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+route::get('/admin', 'AdminController@index');
+
+Route::get('/admin/post', 'AdminController@indexposts');
+Route::post('/admin/post', 'AdminController@agregarPost');
+
+route::get('/admin/modificar/{id}', 'AdminController@mostrar');
+route::post('/admin/modificar/{id}', 'AdminController@modificar');
+
+Route::get('/admin/usuarios', 'AdminController@indexusuarios');
