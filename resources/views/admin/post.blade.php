@@ -35,11 +35,11 @@
             <br>
             <select class="categoria" name="categoria" id="categoria" value="{{old('categoria')}}">
                 <option value="Otro">Otro</option>
-                <option value="europa">Europa</option>
-                <option value="america">America</option>
-                <option value="asia">Asia</option>
-                <option value="africa">Africa</option>
-                <option value="oceania">Oceania</option>
+                <option value="Europa">Europa</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="Oceania">Oceania</option>
             </select>
 
             <label for="contenido">Conentido del Post</label>

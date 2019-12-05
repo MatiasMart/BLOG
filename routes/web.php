@@ -13,9 +13,11 @@
 
 use App\Http\Controllers\AdminController;
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('index');
-});
+}); */
+
+Route::get('/', 'IndexController@index');
 
 Auth::routes();
 
