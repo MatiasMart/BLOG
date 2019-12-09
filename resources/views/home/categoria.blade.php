@@ -11,6 +11,7 @@ Categorias
 @section('content')
 
 
+
 <ul class="cards">
     <li class="cards__item">
       <div class="card">
