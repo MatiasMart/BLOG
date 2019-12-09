@@ -19,9 +19,10 @@
           <h4 >Panel de Adminsitrador</h4>
 
           <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="/admin">Home</a></li>
-            <li><a href="/admin/post">Post</a></li>
+            <li class="active"><a href="/admin">Panel Principal</a></li>
+            <li><a href="/admin/post">Crear Post</a></li>
             <li><a href="/admin/usuarios">Usuarios</a></li>
+            <li><a href="/">Volver al Blog</a></li>
           </ul><br>
 
           <div class="input-group">

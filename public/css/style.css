@@ -2,12 +2,12 @@
 
 *{
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;;
+    font-family: 'Playfair Display', serif;
 }
 
 
 html, body {
-    background-color: #fff;
+    background-color: beige;
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
@@ -77,9 +77,11 @@ main{
     z-index: 2;
 }
 
-.container{
-
+#app{
+    width: 100%;
+    background-color: beige;
 }
+
 
 .login{
     margin-top: 100px;
@@ -257,19 +259,19 @@ input[type=file], select, textarea{
  
  /* /agregar admin */
 
-  /*  admin */
- /* /agregar admin */
+
 
 
  /* HOME PRINCIPAL */
 
  .contenido-home{
-     width: 72.5%;
+     width: 90%;
      margin: 0 auto;
     }
 
 
 .banner{
+    margin-top: 50px;
     position: relative;
     top: 60px;
     z-index: 1;
@@ -279,9 +281,7 @@ input[type=file], select, textarea{
     width: 100%;
  }
 
- .principal-home {
-     margin-top: 20px;;
- }
+
 
  .principal-home img{
     width: 100%;
@@ -295,6 +295,162 @@ input[type=file], select, textarea{
  .principal-home h5{
      display: inline;
   }
+
+  #ladoD{
+      width: 100%;
+  }
+
+  #ladoI h4{
+      padding: 10px 0;
+    border-bottom: 1px solid black;
+  }
+
+  #ladoI img{
+   border-radius: 50%;
+   width: 70%;
+   margin: 0 auto;
+   display: flex;
+  border-bottom: 1px solid black;
+  padding-top: 7%;
+}
+
+
+#ladoI h3, p{
+    text-align: center;
+    margin: 5%;
+ }
+
+ #ladoI .redes a{
+    padding: 4% 5%;
+    background-color: lightgrey;
+    margin: 1% 4%;
+ }
+
+ #ladoI ion-icon{
+    color: grey;
+ }
+
+ .redes{
+    margin: 7% 20%;
+ }
+ .redes div{
+    margin-bottom: 9%;
+ }
+
+ #ladoI h6{
+     color: rgba(92, 87, 87, 0.685);;
+    padding: 10px 0;
+  border-bottom: 1px solid rgba(146, 141, 141, 0.685);
+}
+
+
+
+  /*prueba */
+  html {
+    background: #f5f7f8;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+}
+header {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+@media (min-width: 30em) {
+    .band {
+        grid-template-columns: 1fr 1fr;
+   }
+}
+@media (min-width: 60em) {
+    .band {
+        grid-template-columns: repeat(4, 1fr);
+   }
+}
+.card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: 400px;
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in;
+}
+
+.card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.card article {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+.card p {
+    flex: 1;
+    line-height: 1.4;
+}
+.card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+}
+.card .thumb {
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 60em) {
+    .item-1 {
+        grid-column: 1 / span 2;
+   }
+    .item-1 h1 {
+        font-size: 24px;
+   }
+   #tarjeta{
+    padding-bottom: 60%;
+}
+
+.principal-home {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#ladoD{
+    width: 80%;
+    float: left;
+}
+
+#ladoI{
+    width: 20%;
+    float: left;
+}
+}
+
+
+  /*  */
 
 
  
@@ -324,9 +480,6 @@ input[type=file], select, textarea{
         margin-right: 0px;
     }
 
-    .posteo{
-
-    }
 
 
 }
@@ -357,8 +510,140 @@ input[type=file], select, textarea{
 a:hover{
     color: rgb(110, 92, 92);
 }
+
 }
  /* /HOME PRINCIPAL */
 
+
+  /* /HOME CATEGORIAS */
+  *, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    background-color: #f0f0f0;
+}
+body {
+    color: #999999;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 1rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.btn {
+    background-color: white;
+    border: 1px solid #cccccc;
+    color: #696969;
+    padding: 0.5rem;
+    text-transform: lowercase;
+}
+.btn--block {
+    display: block;
+    width: 100%;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+}
+.cards__item {
+    display: flex;
+    padding: 1rem;
+}
+@media (min-width: 40rem) {
+    .cards__item {
+        width: 50%;
+   }
+}
+@media (min-width: 56rem) {
+    .cards__item {
+        width: 33.3333%;
+   }
+}
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+}
+.card__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+}
+.card__image::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+    .card__image::before {
+        padding-top: 66.6%;
+   }
+}
+.card__image--flowers {
+    background-image: url(https://unsplash.it/800/600?image=82);
+}
+.card__image--river {
+    background-image: url(https://mochilerosentailandia.com/wp-content/uploads/2015/08/where-travel-insurance-ends.jpg);
+}
+.card__image--record {
+    background-image: url(https://unsplash.it/800/600?image=39);
+}
+.card__image--fence {
+    background-image: url(https://unsplash.it/800/600?image=59);
+}
+.card__title {
+    color: #696969;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.card__text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+   /* /HOME CATEGORIAS */
+
+
+   html, body{
+    background-color: beige;
+   }
+
+
+      /* /HOME POSTEOS CATEGORIAS */
+    
+
+
+         /* /HOME POSTEOS CATEGORIAS */
 
 

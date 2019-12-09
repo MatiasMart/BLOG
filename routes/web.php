@@ -33,4 +33,14 @@ route::post('/admin/modificar/{id}', 'AdminController@modificar');
 
 route::get('/admin/eliminar/{id}', 'AdminController@eliminar');
 
-Route::get('/admin/usuarios', 'AdminController@indexusuarios');
+Route::get('/admin/usuarios', 'AdminController@usuarios');
+
+route::get('/usuarios/eliminar/{id}', 'AdminController@usuariosEliminar');
+
+Route::get('/posteos', 'IndexController@categorias');
+
+route::get('/categoria/{id}', 'IndexController@posteosCat');
+
+
+
+

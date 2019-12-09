@@ -4,32 +4,46 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Http\Controllers\Helper;
+use App\User;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        if (Helper::noEsAdmin()){
+            return redirect("/");
+        }
+        $posts = Post::all()->sortByDesc("created_at");
        return view('admin.admin', compact('posts'));
     }
 
     public function indexposts()
     {
+        if (Helper::noEsAdmin()){
+            return redirect("/");
+        } 
         return view('admin.post');
     }
 
     public function indexusuarios()
     {
+        if (Helper::noEsAdmin()){
+            return redirect("/");
+        }
         return view('admin.usuarios');
     }
 
     public function agregarPost(Request $req)
     {
+        if (Helper::noEsAdmin()){
+            return redirect("/");
+        }
         $this->validate($req, 
         [ 
             'titulo' => "required|max:200|unique:post,titulo",
             'imagen' => "required|image",
-            'contenido' => "required|max:3000"
+            'contenido' => "required|max:8000"
         ],
 
         [   
@@ -60,6 +74,9 @@ class AdminController extends Controller
 
     public function mostrar($id)
     {
+        if (Helper::noEsAdmin()){
+            return redirect("/");
+        }
         $post = Post::find($id);
 
         return view('admin.mostrar', compact('post'));
@@ -67,6 +84,9 @@ class AdminController extends Controller
 
     public function modificar(Request $req)
     {
+        if (Helper::noEsAdmin()){
+            return redirect("/");
+        }
 
         $id = $req["id"];
         
@@ -91,10 +111,37 @@ class AdminController extends Controller
 
 
     public function eliminar($id){
+
+        if (Helper::noEsAdmin()){
+            return redirect("/");
+        }
         $post = Post::find($id);
         $post->delete();
     
         return redirect("/admin");
 
     }
+
+    public function usuarios(){
+        if (Helper::noEsAdmin()){
+           return redirect("/");
+       }
+       $usuarios = User::all();
+
+
+       return view('admin.usuarios', compact('usuarios'));
+   }
+
+   public function usuariosEliminar($id){
+    if (Helper::noEsAdmin()){
+       return redirect("/");
+   }
+   $usuarios = User::find($id);
+
+
+   $usuarios->delete();
+
+   return redirect("/admin/usuarios");
+
+}
 }

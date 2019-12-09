@@ -23,21 +23,74 @@ Mi Blog
 
             <div class="principal-home">
 
-                @foreach ($posteos as $post)
-                    <div class="posteo">
-                            <a href="/pelotudo">
-                                <img src="/storage/{{$post->img}}" alt="">
-                                <p> Publicado {{$post->created_at}} • {{$post->categoria}}</p>    
-                                <h3>{{$post->titulo}}</h3>
-                                <br>  
-                                <h6>Leer mas   <ion-icon name="arrow-round-forward"></ion-icon>   </h6>
-                                </a>
-                                <hr>
-                    </div>
-              @endforeach
+                <div id="ladoD">
+                                <header>
+                                    <h1>Ultimos Blogs!</h1>
+                                </header>
+                                <div class="band">
+                                    <div class="item-1">
+                                    <a  href="/detalle/1" class="card">
+                                        <div class="thumb"  id="tarjeta"></div>
+                                        <article>
+                                        <h1>Quien Soy?</h1>
+                                        <span>Leer mas!</span>
+                                        </article>
+                                    </a>
+                                    </div>
 
-              
-          
+                        @foreach ($posteos as $post)
+                
+                            <div class="posteo">
+                                <div class="item-2">
+                                    <a href="/detalle/{{$post->id}}" class="card">
+                                    <div class="thumb" style=""> <img src="/storage/{{$post->img}}" alt=""></div>
+                                    <article>
+                                        <h6>{{$post->created_at}}</h6>
+                                        <h1>{{$post->titulo}}</h1>
+                                        <span>Leer mas</span>
+                                    </article>
+                                    </a>
+                                </div>
+                            </div>
+
+                        @endforeach 
+                        </div>
+                </div>
+
+                <div id="ladoI">
+                    <h4>Sobre mi</h4>
+
+                    <img src="/storage/demi.png" alt="imagen de mi ">
+
+                    <h3>Matias Martinelli</h3>
+
+                    <p>Soy un estudiante de Programacion que disfruta viajar y conocer nuevos lugares</p>
+
+                    <h4>Mis Redes</h4>
+
+                    <div class="redes">
+                            <div>
+                                    <a href="https://es-la.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+                                    <a href="https://twitter.com/MatiMartinelli4"><ion-icon name="logo-twitter"></ion-icon></a>
+                                    <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                            </div>
+                            <div>
+                                    <a href=""><ion-icon name="logo-skype"></ion-icon></a>
+                                    <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                                    <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+                            </div>
+                    </div>
+
+                    <h4>Categorias</h4>
+
+                    @forelse ($categorias as $categoria)
+                    <a href="/categoria/{{$categoria->id}}"><h6>{{$categoria->categoria}}</h6></a>
+                    @empty
+                        
+                    @endforelse
+                    
+                </div>
+
             </div>
         </div>
 @endsection

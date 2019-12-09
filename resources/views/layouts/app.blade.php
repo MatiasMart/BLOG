@@ -1,3 +1,6 @@
+<?php
+use App\Http\Controllers\Helper;
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -14,7 +17,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -22,9 +25,9 @@
     @yield('links')
     <title>@yield('titulo')</title>
 </head>
-<body>
+<body style="background-color: beige;">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" id="logoViaje" style="position:fixed">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img id="imglogo" src="/storage/8af6368b-460d-4a97-85a6-13a511de9dc8_200x200.png" alt="" >
@@ -41,10 +44,10 @@
 
                     <ul class="navbar-nav block">
                         <li class="nav-item">
-                            <a class="nav-link color_menu" href="../recursos/index.php">INICIO</a>
+                            <a class="nav-link color_menu" href="/">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../producto/listado.php">BLOG</a>
+                            <a class="nav-link" href="/posteos">BLOG</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../recursos/faq.php">SOBRE MIi</a>
@@ -68,6 +71,11 @@
                                 </li>
                             @endif
                         @else
+                            @if (!Helper::noEsAdmin())
+                            <li>
+                                <a class="nav-link" href="/admin">PANEL DE CONTROL</a>
+                            </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if (Auth::user()->imagen)
