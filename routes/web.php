@@ -12,6 +12,7 @@
 */
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\IndexController;
 
 /* Route::get('/', function () {
     return view('index');
@@ -40,6 +41,8 @@ route::get('/usuarios/eliminar/{id}', 'AdminController@usuariosEliminar');
 Route::get('/posteos', 'IndexController@categorias');
 
 route::get('/categoria/{id}', 'IndexController@posteosCat');
+
+route::get('/post/{id}', 'IndexController@mostrarPost');
 
 
 

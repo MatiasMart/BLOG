@@ -43,7 +43,7 @@ class AdminController extends Controller
         [ 
             'titulo' => "required|max:200|unique:post,titulo",
             'imagen' => "required|image",
-            'contenido' => "required|max:8000"
+            'contenido' => "required|max:15000"
         ],
 
         [   

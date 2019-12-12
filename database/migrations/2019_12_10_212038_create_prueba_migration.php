@@ -4,29 +4,28 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriasTable extends Migration
+class CreatePruebaMigration extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-/*     public function up()
+    public function up()
     {
-        Schema::create('categorias', function (Blueprint $table) {
+        Schema::create('prueba_migration', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("Categoria");
             $table->timestamps();
         });
-    } */
+    }
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-/*     public function down()
+    public function down()
     {
-        Schema::dropIfExists('categorias');
-    } */
+        Schema::dropIfExists('prueba_migration');
+    }
 }

@@ -29,4 +29,12 @@ class IndexController extends Controller
         return view('home.posteos', compact('posteos'));
     }
 
+
+    public function mostrarPost($id){
+
+        $post = Post::find($id);
+        
+        return view('home.post', compact('post'));
+    }
+
 }

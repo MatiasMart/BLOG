@@ -29,7 +29,7 @@ Mi Blog
                                 </header>
                                 <div class="band">
                                     <div class="item-1">
-                                    <a  href="/detalle/1" class="card">
+                                    <a  href="/detalle/1" class="card-home">
                                         <div class="thumb"  id="tarjeta"></div>
                                         <article>
                                         <h1>Quien Soy?</h1>
@@ -42,7 +42,7 @@ Mi Blog
                 
                             <div class="posteo">
                                 <div class="item-2">
-                                    <a href="/detalle/{{$post->id}}" class="card">
+                                    <a href="/detalle/{{$post->id}}" class="card-home">
                                     <div class="thumb" style=""> <img src="/storage/{{$post->img}}" alt=""></div>
                                     <article>
                                         <h6>{{$post->created_at}}</h6>
