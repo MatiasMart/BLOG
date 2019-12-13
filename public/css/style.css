@@ -916,3 +916,43 @@ transition: all 250ms ease-in-out 0s;
 }
 
 
+
+
+
+/*  SECCION DE COMENTARIOS */
+
+
+
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid beige;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed beige;
+    margin-bottom:25px;
+}
+.este{
+    display: flex;
+    justify-content: center;
+}
+
+.p-comentarios{
+    margin: 0;
+    text-align: left;
+}
+
+*{
+    font-size: 1.5rem;
+}
+
+
+
+/*  SECCION DE COMENTARIOS */
+

@@ -44,6 +44,7 @@ route::get('/categoria/{id}', 'IndexController@posteosCat');
 
 route::get('/post/{id}', 'IndexController@mostrarPost');
 
+Route::post('/agregarComentario', 'IndexController@agregarComentario');
 
 
 
