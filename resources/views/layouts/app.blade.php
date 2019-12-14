@@ -89,7 +89,7 @@ use App\Http\Controllers\Helper;
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if (Auth::user()->imagen)
-                                    <img src="/storage/{{ Auth::user()->imagen}}" alt="foto de perfil" height="40p" >
+                                    <img src="/storage/{{ Auth::user()->imagen}}" alt="foto de perfil" id="imgPerfil" height="40p" >
                                     @endif
                                     {{ Auth::user()->name }}
                                 </a>

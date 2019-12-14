@@ -9,7 +9,7 @@ Posts
 
 <section class="cards cardOVer">
 @foreach ($posteos as $post)
-    <article class="card">
+    <article class="card tarjeta-post">
       <img class="post-img"  src="/storage/{{$post->img}}" alt="">
       <div class="card__info-hover">
         <svg class="card__like"  viewBox="0 0 24 24">

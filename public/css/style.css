@@ -85,7 +85,8 @@ main{
 
 
 .login{
-    margin-top: 100px;
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 
@@ -109,6 +110,7 @@ main{
     {
         color: rgb(216, 72, 72);
     }
+
     
     /* Set black background color, white text and some padding */
     footer {
@@ -342,6 +344,14 @@ input[type=file], select, textarea{
      color: rgba(92, 87, 87, 0.685);;
     padding: 10px 0;
   border-bottom: 1px solid rgba(146, 141, 141, 0.685);
+}
+
+#imgPerfil{
+    max-width: 40%;
+}
+
+#navbarDropdown{
+    width: 113px;
 }
 
 
@@ -722,11 +732,11 @@ img {
       }
       .card {
         z-index: 1;
-        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-top: 14%;
         margin-right: 25px;
         transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
         background-color: #fff;
-          width: 50%;
         border-radius: 12px;
         box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
         float: left;
@@ -789,6 +799,22 @@ img {
         height: 63%;
         border-radius: 2%;
       }
+
+      .tarjeta-post{
+        height: 244px;
+        width: 50%;
+        margin-top: 2%;
+
+      }
+      
+
+
+      @media (min-width: 768px) {
+
+          .tarjeta-post{
+            height: 341px;
+          }
+       }
       
 
 
@@ -948,6 +974,10 @@ transition: all 250ms ease-in-out 0s;
     text-align: left;
 }
 
+#comentario{
+    font-size: 1.2rem;
+}
+
 *{
     font-size: 1.5rem;
 }
@@ -956,3 +986,16 @@ transition: all 250ms ease-in-out 0s;
 
 /*  SECCION DE COMENTARIOS */
 
+
+.tarjeta-login{
+    width: 100%;
+}
+
+.tarjeta-principal{
+    display: contents;
+}
+
+.container-login{
+    display: flex;
+    justify-content: center;
+}

@@ -32,23 +32,25 @@ Post
                                 <div class="clearfix"></div>
                                 <hr>
                                 <ul class="media-list">
-                                         
-                                            <li class="media">
-                                                <a href="#" class="pull-left">
-                                                    <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
-                                                </a>
-                                                <div class="media-body">
-                                                    <span class="text-muted pull-right">
-                                                        <small class="text-muted">30 min ago</small>
-                                                    </span>
-                                                    <strong class="text-success">@MartinoMont</strong>
-                                                    <p class="p-comentarios">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                        Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.
-                                                    </p>
-                                          
-                                        </div>  
+                                @if ($comentarios != [])
+                                    @for ($i = 0; $i < sizeof($comentarios); $i++)
+                                    <li class="media">
+                                        <a href="#" class="pull-left">
+                                            <img src="/storage/{{$usuarios[$i]->imagen}}" alt="" class="img-circle">
+                                        </a>
+                                        <div class="media-body">
+                                            <span class="text-muted pull-right">
+                                                <small class="text-muted">30 min ago</small>
+                                            </span>
+                                            <strong class="text-success">{{$usuarios[$i]->name}}</strong>
+                                            <p class="p-comentarios">
+                                                {{$comentarios[$i]->comentario}}
+                                            </p>
+                                  
+                                         </div>  
                                     </li>
+                                    @endfor
+                                @endif
                                 </ul>
                             </div>
                         </div>

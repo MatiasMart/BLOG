@@ -36,8 +36,26 @@ class IndexController extends Controller
     public function mostrarPost($id){
 
         $post = Post::find($id);
+
+        $comentarios = $post->comentarios;
+        if ($comentarios != []) {
+            $usuarios = [];
+            foreach ($comentarios as $comentario){
+                $usuarios[] = $comentario->usuarios;
+            }
+            return view('home.post', compact('post', 'comentarios', 'usuarios'));
+        } 
+
+        if ($comentarios){
+            $comentarios = [];
+            return view('home.post', compact('post', 'comentarios'));
+        }
+  
+
         
-        return view('home.post', compact('post'));
+        
+    
+        /* return view('home.post', compact('post', 'comentarios', 'usuarios')); */
     }
 
     public function agregarComentario(Request $req){
