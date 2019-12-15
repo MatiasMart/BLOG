@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     <img src="/storage/{{ Auth::user()->imagen}}" alt="">
-                    estas logeado
+                    <h3>Bienvenido {{ Auth::user()->name}} </h3>
                     
                 </div>
             </div>

@@ -30,7 +30,7 @@ Mi Blog
                                 <div class="band">
                                     <div class="item-1">
                                     <a  href="/detalle/1" class="card-home">
-                                        <div class="thumb"  id="tarjeta"></div>
+                                        <div class="thumb" style=""> <img src="https://www.cafeprensa.com.ar/gestor/wp-content/uploads/2019/03/viajes-780x405.jpg" alt=""></div>
                                         <article>
                                         <h1>Quien Soy?</h1>
                                         <span>Leer mas!</span>
@@ -42,7 +42,7 @@ Mi Blog
                 
                             <div class="posteo">
                                 <div class="item-2">
-                                    <a href="/detalle/{{$post->id}}" class="card-home">
+                                    <a href="/post/{{$post->id}}" class="card-home">
                                     <div class="thumb" style=""> <img src="/storage/{{$post->img}}" alt=""></div>
                                     <article>
                                         <h6>{{$post->created_at}}</h6>

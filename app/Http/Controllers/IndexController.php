@@ -81,4 +81,9 @@ class IndexController extends Controller
 
     }
 
+
+    public function mostrarContacto(){
+        return view('home.contacto');
+    }
+
 }

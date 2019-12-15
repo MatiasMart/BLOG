@@ -5,6 +5,12 @@
     font-family: 'Playfair Display', serif;
 }
 
+#remember{
+    margin: 0;
+    margin-left: -17px;
+    margin-top: 7px;
+}
+
 
 html, body {
     background-color: beige;
@@ -140,6 +146,7 @@ main{
 
 
 input[type=text], select, textarea{
+    font-size: 1.3rem;
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -152,9 +159,9 @@ input[type=text], select, textarea{
 
   
 input[type=file], select, textarea{
+    border: transparent;
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    font-size: 1.1rem;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;

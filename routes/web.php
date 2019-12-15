@@ -46,5 +46,7 @@ route::get('/post/{id}', 'IndexController@mostrarPost');
 
 Route::post('/agregarComentario', 'IndexController@agregarComentario');
 
+route::get('/contacto', 'IndexController@mostrarContacto');
+
 
 

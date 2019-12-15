@@ -57,10 +57,17 @@
                             <label for="fecha" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fecha" type="date" class="form-control " name="fecha" value="{{ old('fecha') }}" required autocomplete="fecha" autofocus max="2001-01-02">
-                                <span>*Debes ser mayor de 18 años para poder registrarte</span>
+                                <input id="fecha" type="date" class="form-control " name="fecha" value="{{ old('fecha') }}" required autocomplete="fecha" autofocus>
+                                {{-- <span>*Debes ser mayor de 18 años para poder registrarte</span> --}}
+                                @error('fecha')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             </div>
                         </div>
+
+
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
