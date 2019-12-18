@@ -40,7 +40,7 @@ Post
                                         </a>
                                         <div class="media-body">
                                             <span class="text-muted pull-right">
-                                                <small class="text-muted">{{$usuarios[$i]->created_at->diffforHumans()}}</small>
+                                                <small class="text-muted">{{$comentarios[$i]->created_at->diffForHumans()}}</small>
                                             </span>
                                             <strong class="text-success">{{$usuarios[$i]->name}}</strong>
                                             <p class="p-comentarios">

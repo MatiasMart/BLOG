@@ -84,11 +84,11 @@ Mi Blog
 
                     <h4>Categorias</h4>
 
-                    @forelse ($categorias as $categoria)
+                    @foreach ($categorias as $categoria)
                     <a href="/categoria/{{$categoria->id}}"><h6>{{$categoria->categoria}}</h6></a>
-                    @empty
+                    
                         
-                    @endforelse
+                    @endforeach
                     
                 </div>
 
