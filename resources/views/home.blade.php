@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card " id="card-Delogin">
                 <div class="card-header">Usuario</div>
 
                 <div class="card-body">
@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img src="/storage/{{ Auth::user()->imagen}}" alt="">
+                    <img id="imagen-usuario" src="/storage/{{ Auth::user()->imagen}}" alt="">
                     <h3>Bienvenido {{ Auth::user()->name}} </h3>
                     
                 </div>

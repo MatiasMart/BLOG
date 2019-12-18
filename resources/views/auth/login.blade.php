@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('links')
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+@endsection
+
 @section('content')
 <div class="container container-login">
     <div class="row tarjeta-principal">
@@ -8,6 +12,11 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                    @if (Session::get('mensaje'))
+                    <script>
+                    swal("Para hacer comentarios debes estar Logueado!");
+                    </script>
+                    @endif
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

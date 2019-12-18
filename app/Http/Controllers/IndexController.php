@@ -14,8 +14,9 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $posteos = Post::all()->take(6);
+        $posteos = Post::paginate(6);
         $categorias = Categoria::all(); 
+        
 
         return view('home.index', compact('posteos', 'categorias'));
     }
@@ -76,7 +77,7 @@ class IndexController extends Controller
     
         }
         else {
-            return redirect('/login');
+            return redirect('/login')->with('mensaje', 'Para hacer comentarios debes estar logeado');
         }
 
     }

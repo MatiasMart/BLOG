@@ -26,6 +26,7 @@ Mi Blog
                 <div id="ladoD">
                                 <header>
                                     <h1>Ultimos Blogs!</h1>
+                                    {{$posteos->links()}}
                                 </header>
                                 <div class="band">
                                     <div class="item-1">
@@ -45,7 +46,7 @@ Mi Blog
                                     <a href="/post/{{$post->id}}" class="card-home">
                                     <div class="thumb" style=""> <img src="/storage/{{$post->img}}" alt=""></div>
                                     <article>
-                                        <h6>{{$post->created_at}}</h6>
+                                        <h6>{{$post->created_at->toFormattedDateString()}}</h6>
                                         <h1>{{$post->titulo}}</h1>
                                         <span>Leer mas</span>
                                     </article>

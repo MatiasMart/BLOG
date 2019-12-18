@@ -60,9 +60,7 @@
                                 <input id="fecha" type="date" class="form-control " name="fecha" value="{{ old('fecha') }}" required autocomplete="fecha" autofocus>
                                 {{-- <span>*Debes ser mayor de 18 años para poder registrarte</span> --}}
                                 @error('fecha')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                    <strong>Debes Ser mayor de 18 años para poder Registrarte</strong>
                             @enderror
                             </div>
                         </div>

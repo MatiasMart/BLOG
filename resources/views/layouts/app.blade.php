@@ -147,15 +147,6 @@ use App\Http\Controllers\Helper;
                                 <li>
                                 <div class="thumb-content"><a href="/posteos">Categorias</a></div>	
                                 </li>
-                                <li>
-                                <div class="thumb-content"><a href="#.">News</a></div>	
-                                </li>
-                                <li>
-                                <div class="thumb-content"><a href="#.">Lifestyle</a></div>	
-                                </li>
-                                <li>
-                                <div class="thumb-content"><a href="#.">About</a></div>	
-                                </li>
                                 </ul>
                                 </div>
                             </div>
