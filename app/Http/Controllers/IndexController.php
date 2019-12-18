@@ -16,7 +16,6 @@ class IndexController extends Controller
     {
         $posteos = Post::paginate(6);
         $categorias = Categoria::all(); 
-        
 
         return view('home.index', compact('posteos', 'categorias'));
     }
