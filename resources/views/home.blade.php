@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img id="imagen-usuario" src="/storage/{{ Auth::user()->imagen}}" alt="">
+                    <img id="imagen-usuario" src="/storage/{{Auth::user()->img}}" alt="">
                     <h3>Bienvenido {{ Auth::user()->name}} </h3>
                     
                 </div>

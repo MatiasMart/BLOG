@@ -36,7 +36,7 @@ Post
                                     @for ($i = 0; $i < sizeof($comentarios); $i++)
                                     <li class="media">
                                         <a href="#" class="pull-left">
-                                            <img src="/storage/{{$usuarios[$i]->imagen}}" alt="" class="img-circle">
+                                            <img src="/storage/{{$usuarios[$i]->img}}" alt="" class="img-circle">
                                         </a>
                                         <div class="media-body">
                                             <span class="text-muted pull-right">
