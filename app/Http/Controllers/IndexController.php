@@ -14,7 +14,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $posteos = Post::paginate(6);
+        $posteos = Post::orderBy('id', 'desc')->paginate(6);
         $categorias = Categoria::all(); 
 
         return view('home.index', compact('posteos', 'categorias'));
