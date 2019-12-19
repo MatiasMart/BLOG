@@ -57,3 +57,8 @@ Los datos del usario administrador son:
 Email:     admin@admin.com
 Password:  admin1234.
 ***
+
+
+*** 
+Video de Explicacion del sistema : https://www.loom.com/share/0d4d32bca49e460d9d887aed864581bf
+***
