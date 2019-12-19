@@ -46,7 +46,9 @@ Mi Blog
                                     <a href="/post/{{$post->id}}" class="card-home">
                                     <div class="thumb" style=""> <img src="/storage/{{$post->img}}" alt=""></div>
                                     <article>
+                                        @if ($post->created_at)
                                         <h6>{{$post->created_at->toFormattedDateString()}}</h6>
+                                        @endif
                                         <h1>{{$post->titulo}}</h1>
                                         <span>Leer mas</span>
                                     </article>
